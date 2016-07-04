@@ -1,4 +1,5 @@
 var fs = require('fs');
-const filePath = './test_file.txt';
-var file = fs.readFileSync(filePath);
-console.log(file);
+var filePath = process.argv[2]; 
+var file = fs.readFileSync(filePath, 'utf8').split('\n');
+var newLineNum = file.length - 1;
+console.log(newLineNum);
